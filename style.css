@@ -1,0 +1,113 @@
+
+h1,h2,h3,h4,h5,h6,p{
+    color: white;
+}
+
+.navbar-default {
+    padding: 10px;
+    background-color: #222;
+}
+
+
+
+.navbar-default .navbar-brand {
+    font-family: 'Amaranth', sans-serif;
+    font-size: 40px;
+    color: #fed136;    
+}  
+
+
+.navbar-default .nav li a {
+    color: #fed136; 
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: 'Cabin', sans-serif;
+}  
+    
+
+
+.navbar-default .nav li a:hover {
+    color: rgb(254,159,54); 
+} 
+
+.navbar-default .navbar-brand:hover {
+    color: rgb(254,159,54); 
+}  
+ 
+
+header {
+    text-align: center;
+    color: #fff;
+    background-attachment: scroll;
+}
+
+.header-image{
+    background-image: url('images/front-foto.jpg');
+    background-position: center center;
+    background-repeat: none;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    padding-bottom: 300px;
+
+}
+
+
+
+header .greeting {
+    padding-top: 20%;
+}
+
+
+header .greeting p {
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 120%;
+    color: white;
+}
+
+section{
+    font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+    padding: 50px;
+    background-color: #222;
+
+}
+
+
+.about-heading{
+    margin: 30px 0;
+}
+
+.my-pic {
+    margin-top: 40px;
+}
+
+.img-responsive {
+margin: 0 auto;
+}
+
+.about-panels {
+    margin-top: 80px;
+}
+
+.panel-title{ 
+    font-size: 20px;
+    font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+
+
+/* -------------------Contact page ----------------*/
+
+.contact-section{
+    margin-top: 100px;
+
+}
+
+
+
+
