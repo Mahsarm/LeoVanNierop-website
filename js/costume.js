@@ -12,15 +12,27 @@ $('body').scrollspy({
 })
 
 
-$('#accordion').on('shown.bs.collapse', function (e) {
-   var id = $(e.target).prev().find("[id]")[0].id;
-   navigateToElement(id);
-})
-
-function navigateToElement(id) {
+//smooth scrolling
+$('li a, .navbar-brand').click(function(){
     $('html, body').animate({
-        scrollTop: $("#" + id).offset().top
-    }, 1000);
-}
+        scrollTop: $( $.attr(this, 'href') ).offset().top
+    }, 800);
+    return false;
+});
 
-    
+
+// smooth active panel 
+$(function () {
+    $('#accordion').on('shown.bs.collapse', function (e) {
+        var offset = $('.panel.panel-default > .panel-collapse.in').offset();
+        if(offset) {
+            $('html,body').animate({
+                scrollTop: $('.panel-title a').offset().top -100
+            }, 800); 
+        }
+    }); 
+});
+
+
+
+

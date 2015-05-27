@@ -44,15 +44,16 @@ h1,h2,h3,h4,h5,h6,p{
     color: rgb(254,159,54); 
 } 
 
+  
 
-
-.navbar-default .navbar-brand:hover {
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus,
+.navbar-default .navbar-brand:active,
+.navbar-default .navbar-brand.active {
     color: rgb(254,159,54); 
-}  
+}
 
-    
  
-
 
 header {
     text-align: center;
@@ -73,7 +74,7 @@ header {
 
 
 header .greeting {
-    padding-bottom: 250px;
+    padding-bottom: 300px;
     padding-top: 300px;
 }
 
@@ -98,7 +99,7 @@ section{
 
 .about-heading{
     margin: 20px 0;
-    padding-top: 50px;
+    padding-top: 60px;
 }
 
 .my-pic {
@@ -106,7 +107,7 @@ section{
 }
 
 .img-responsive {
-margin: 0 auto;
+    margin: 0 auto;
 }
 
 .about-panels {
@@ -118,19 +119,31 @@ margin: 0 auto;
     font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
+.navbar-toggle{
+    background-color:#fed136;
+}
 
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: black;
+}
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: rgb(254,159,54);
+}
 
 
 /* -------------------Contact page ----------------*/
 
 .contact-section{
     margin-top: 100px;
-
 }
 
 
 
-/* -------------------RWB----------------*/
+
+/* -------------------------MEDIA QUERIES-------------------
+----------------------------------------------------------*/
 
 
 @media(max-width:768px) {
@@ -179,8 +192,16 @@ margin: 0 auto;
         font-size: 30px;
     }
     
+    .navbar-default .navbar-brand {
+        font-size: 28px;
+    } 
+    
     h2, h3 {
         font-size: 22px;
+    }
+    
+    .about-panels {
+        margin-top: 50px;
     }
 
 }
@@ -189,14 +210,9 @@ margin: 0 auto;
 @media(max-width:321px) {
 
     .navbar-default .navbar-brand {
-    font-size: 28px;
-    margin-top: 300px;
-    
+    font-size: 25px;
     } 
 
-    .navbar-toggle, .navbar-brand {
-        float:none;
-    }
     
     header .greeting {
        padding-bottom: 140px;
@@ -209,17 +225,29 @@ margin: 0 auto;
     
     h2, h3 {
         font-size: 18px;
+        line-height: 120%;
     }
     
-    .about-heading{
-    padding-top: 60px;
+    .panel-title{ 
+        font-size: 17px;
     }
     
-    .navbar-default {
-    padding: 5px;
-    background-color: #222;
-    border: 1px solid white;
-}
+    
+    .about-panels {
+        margin-top: 40px;
+    }
     
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
