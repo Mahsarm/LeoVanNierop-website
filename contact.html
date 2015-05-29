@@ -17,10 +17,11 @@
    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 
 </head>
-<body>
+<body class="contact-body">
+    <div class="contact-wrapper">
     <div class="container">
         <header>
-            <nav class="navbar navbar-default navbar-fixed-top">
+            <nav class="navbar navbar-default navbar-fixed-top contact-nav">
                 <div class="container">
                     <div class="navbar-header page-scroll">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#toggle-menu">
@@ -29,7 +30,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                            <a class="navbar-brand page-scroll" href="#page-top">Leo Van Nierop</a>
+                            <a class="navbar-brand page-scroll" href="base.html#page-top">Leo Van Nierop</a>
                         </div>
                         
                         <div class="collapse navbar-collapse" id="toggle-menu">
@@ -53,54 +54,67 @@
             </nav>
         </header>
         
-                <div class="container contact-section">
-                    <form class="form-horizontal">
-                      <div class="form-group">
-                        <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
-                        <div class="col-sm-10">
-                          <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
-                        <div class="col-sm-10">
-                          <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <div class="col-sm-offset-2 col-sm-10">
-                          <div class="checkbox">
-                            <label>
-                              <input type="checkbox"> Remember me
-                            </label>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <div class="col-sm-offset-2 col-sm-10">
-                          <button type="submit" class="btn btn-default">Sign in</button>
-                        </div>
-                      </div>
-                    </form>
+                       
+        <div id="contact">
+            <div class="container contact-section">
+                 <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2 class="section-heading">Contact Me!</h2>
+
+                    </div>
                 </div>
                 
-                <form action="" method="post">
-<input type='hidden' name='csrfmiddlewaretoken' value='C2rhacWw5tSkx81Fk82e1a5y1WsbFkR3' />
-    <ul>
-    <li><label for="id_your_name">Your name:</label> <input id="id_your_name" name="your_name" type="text" /></li>
-<li><label for="id_your_email">Your email:</label> <input id="id_your_email" name="your_email" type="email" /></li>
-<li><label for="id_subject">Subject:</label> <input id="id_subject" name="subject" type="text" /></li>
-<li><label for="id_message">Message:</label> <textarea cols="40" id="id_message" name="message" rows="10">
-</textarea></li>
-    <input type="submit" value="Send" />
-    <ul>
-<form>
+                <div class="row contact-section">
+                    <div class="col-lg-12">
+                        <form name="contact-form" id="contact-form" action="" method="post">
+                            <input type='hidden' name='csrfmiddlewaretoken' value='C2rhacWw5tSkx81Fk82e1a5y1WsbFkR3' />
+                            
+                            <div class="row">
+                            
+                                <div class="col-md-6 col-md-offset-3">
+                                
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Your Name" id="id_your_name" name="your_name">
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" placeholder="Your Email" id="id_your_email" name="your_email">                                    
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Subject" id="id_subject" name="subject">       
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <textarea class="form-control" placeholder="Your Message" id="id_message" name="message" rows="10"></textarea>
+                                    </div>
+                                
+                                </div>
+                                
+                                <div class="clearfix"></div>
+                                <div class="col-lg-12 text-center">
+                                    <button type="submit" class="btn btn-xl">Send</button>
+                                </div>
+                                
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+                
+                
                
     </div>
+    
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <script src="js/costume-js.js"></script>
+    </div>
+    <footer class="copyright"> 
+    &copy powered by Leo Van Nierope, designed by <a href="www.mahsarahimi.com">Mahsa Rahimi</a> 2015
+    </footer>
 </body>
 </html>
 
