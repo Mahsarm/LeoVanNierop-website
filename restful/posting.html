@@ -1,0 +1,97 @@
+<!doctype html>
+
+
+<html lang="en">
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="menus.css">
+
+
+
+
+
+</head>
+
+<body>
+
+<div class="orders">
+
+<div id="results">
+
+    <ul class="names">
+                            
+    </ul>
+</div>
+
+
+<div class="post">
+<input type="text" placeholder="enter your name" id="name">
+<input type="text" placeholder="enter your age" id="age">
+<input type="text" placeholder="enter your order" id="drink">
+<input type="button" value="submit" id="add_order">
+</div>
+
+</div>
+ 
+<script src="jquery-1.11.2.min.js"></script>
+
+<script type="text/javascript">
+    
+    var $names = $('.names');
+    var $name = $('#name');
+    var $age = $('#age');
+    var $drink = $('#drink');
+    
+    $('#add_order').on('click', function(){
+
+        var order = {
+            name: $name.val(),
+            age : $age.val(),
+            drink: $drink.val(),
+        };
+        
+        $.ajax({
+    type: 'POST',
+    url: 'http://rest.learncode.academy/api/learncode/friends',
+    data: order,
+    
+    success: function(new_order) {
+            
+            $names.append('<li> Name:' + new_order.name + ', Drink:' + new_order.drink + ', Age:' + new_order.age + '</li>');
+            
+            
+        }
+    });
+    
+    });
+
+
+  
+
+
+
+
+    
+    
+        
+    
+</script>   
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

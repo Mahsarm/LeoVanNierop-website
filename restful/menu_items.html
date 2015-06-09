@@ -1,0 +1,103 @@
+<!doctype html>
+
+
+<html lang="en">
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="menus.css">
+
+
+
+
+
+</head>
+
+<body>
+
+
+<nav>
+	<ul>
+		<li><a href="#">Home</a></li>
+		<li><a href="#">Tutorials</a>
+			<ul>
+				<li><a href="#">Photoshop</a></li>
+				<li><a href="#">Illustrator</a></li>
+				<li><a href="#">Web Design</a>
+					<ul class="names">
+						
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li><a href="#">Articles</a>
+			<ul>
+				<li><a href="#">Web Design</a></li>
+				<li><a href="#">User Experience</a></li>
+			</ul>
+		</li>
+		<li><a href="#">Inspiration</a></li>
+	</ul>
+</nav>
+
+<div id="results">
+
+</div>
+ 
+<script src="jquery-1.11.2.min.js"></script>
+
+<script type="text/javascript">
+    
+var names = $('.names');
+
+$.ajax({
+    type: 'GET',
+    url: 'http://rest.learncode.academy/api/learncode/friends',
+    success: function(data) {
+    console.log(data); //give me the array of object in api
+    
+    $.each( data, function( i, item ) {   // loop over each obj in the array: i: 0,1,2... and item: objects in our array
+        if(item.age==='bananas'){
+        
+            // easy way :  $(names).append();
+            
+            var li_item = document.createElement('li');                     
+            var li_a = document.createElement('a');
+            $(li_item).append(li_a); 
+            
+            var t = document.createTextNode(item.name);  
+            
+            $(li_a).append(t); 
+            
+            $(names).append(li_item);  
+            
+        }
+    });
+    
+    }});
+
+
+
+    
+    
+        
+    
+</script>   
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
